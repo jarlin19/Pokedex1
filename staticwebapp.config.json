@@ -1,21 +1,8 @@
 {
-  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
-
-  "routes": [
-    {
-      "route": "/",
-      "rewrite": "/pokedex-angular/index.html"
-    }
-  ],
-
   "navigationFallback": {
-    "rewrite": "/pokedex-angular/index.html",
-    "exclude": [
-      "/pokedex-angular/assets/*",
-      "/pokedex-angular/*.{js,css,ttf,png,jpg,gif,ico,txt,map}"
-    ]
+    "rewrite": "/index.html",
+    "exclude": [ "/assets/*", "/pokedex-angular/*", "/*.{js,css,ttf,png,jpg,gif,ico,txt,map}" ]
   },
-
   "globalHeaders": {
     "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://assets.pokemon.com; connect-src 'self' https://pokeapi.co https://beta.pokeapi.co; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests",
     "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
